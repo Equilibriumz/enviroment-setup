@@ -11,3 +11,11 @@ mkdir $PROJECT_DIR
 mkdir $GO_DIR
 mkdir $GO_DIR/src
 mkdir $GO_DIR/src/github.com
+
+echo "--- Setup Golang enviroment variables ---"
+go env -w GO111MODULE=""
+go env -w GOPATH=$HOME/Projects/go
+go env -w GOBIN=$HOME/Projects/go/bin
+export GOROOT=/snap/go/current
+export PATH=$HOME/Projects/go/bin:$PATH
+export PATH=$HOME/Projects/go:$PATH
