@@ -19,3 +19,7 @@ go env -w GOBIN=$HOME/Projects/go/bin
 export GOROOT=/snap/go/current
 export PATH=$HOME/Projects/go/bin:$PATH
 export PATH=$HOME/Projects/go:$PATH
+echo "--- Setup environment done ---"
+
+echo "--- Setup Goland - latest ---"
+snap install goland --classic
