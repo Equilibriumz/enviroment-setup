@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "--- Install Golang ---"
-snap install go --channel="1.18/stable" --classic
+snap install go --channel="1.20/stable" --classic
 go version
 
 echo "--- Setup project directory ---"
@@ -13,7 +13,7 @@ mkdir $GO_DIR/src
 mkdir $GO_DIR/src/github.com
 
 echo "--- Setup Golang enviroment variables ---"
-go env -w GO111MODULE=""
+go env -w GO111MODULE="on"
 go env -w GOPATH=$HOME/Projects/go
 go env -w GOBIN=$HOME/Projects/go/bin
 export GOROOT=/snap/go/current
